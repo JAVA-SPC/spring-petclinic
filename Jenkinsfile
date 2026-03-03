@@ -1,15 +1,26 @@
 pipeline {
-    agent{label 'JAVA'}  //the java is label name inisde jenkins so here also must match
+    agent{label 'JAVA'} //if multi node/agents ->'JAVA','JAVA2','JAVA3'...
+    triggers {
+        pollSCM('* * * * *')         //instead of pollSCM we can also use upstream,cron,githubpush
+    }                               //the java is label name inisde jenkins so here also must match
     stages{
         stage('git checkout') {
             steps{
-            git url : 'https://github.com/Naveen-Jampala/spring-petclinic.git',
-            branch : 'main'
+                git url : 'https://github.com/Naveen-Jampala/spring-petclinic.git',
+                 branch : 'main'
             }
         }
-        stage('build & test') {
+        stage('build & scan') {
             steps{
-                sh 'mvn package sonar:sonar'
+              withCrendentials([string(credentialsId: 'sonar_id',variable:'SONAR_TOKEN')]) {
+                    withSonarQubeEnv('SONAR') {
+                    sh """mvn package sonar:sonar \
+                         -Dsonar.projectKey=JAVA-SPC_spring-petclinic \
+                         -Dsonar.organization=java-spc \
+                         -Dsonar.host.url=https://sonarcloud.io \  
+                         -Dsonar.login=$SONAR_TOKEN """
+                    }
+                }
             }
         }
     }
