@@ -1,0 +1,121 @@
+[33mde475ea[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m added workflow
+[33m18cba33[m added ..jenkinsfile
+[33m6f24364[m added jenkinsfile
+[33ma5cc2c4[m added jenkinsfile
+[33me316074[m Set fetch size for Hibernate
+[33ma4fcf04[m Fix main method for docker compose
+[33mab1d536[m Merge pull request #2188 from anirudhasht
+[33mf5b8a89[m Polish "Fix Java version mismatch and clarify Gradle usage in readme"
+[33m430b5ff[m Fix Java version mismatch and clarify Gradle usage in readme
+[33m987613e[m Polish
+[33m5149abb[m Upgrade to native buildtools 0.11.3
+[33m8f5f58c[m Upgrade to Apache Maven 3.9.12
+[33m95f7e82[m Upgrade to Spring Boot 4.0.1
+[33m2beb238[m Remove outdated references to HSQLDB
+[33mfd4361b[m Use snake case physical naming strategy
+[33m3e1ce23[m Polish
+[33m134c5a3[m Use more specific test dependencies
+[33m44d5f21[m Remove jspecify annotations
+[33ma9b7c6b[m Use canonical starter name for Boot 4.0
+[33m828940e[m Support building with Java 17
+[33mfc1c749[m Revert removal of --release 17
+[33m8f08b38[m fix: update MySQL user creation for MySQL 8.0+ compatibility
+[33m37d5315[m Upgrade to Spring Boot 4.0.0
+[33mb5a630b[m Remove outdated wrapper
+[33m9725f6d[m Upgrade to Gradle 9.2.0
+[33m645c852[m Upgrad to Spring Boot 4.0.0-RC2
+[33m6feeae0[m Switch to building the project with Java 25
+[33m7deaa78[m Upgrade to Gradle 9.1.0
+[33m684adfe[m Merge pull request #2016 from mhalbritter
+[33m47be0ea[m Upgrade to Spring Boot 4.0.0-M3
+[33ma0aea8e[m Add NullAway and JSpecify annotations
+[33m3aa79e3[m Upgrade to Spring Boot 4.0.0-M2
+[33m66747e3[m feat: enhance error page with localized messages for status codes(1)
+[33mb2aee1d[m feat: enhance error page with localized messages for status codes
+[33m438adfd[m docs: update README with note about legacy presentation
+[33mcf2931f[m Remove unused imports
+[33m196e5aa[m docs: capitalize 'JAR' in README for consistency
+[33mb26f235[m Update to current versions
+[33m30aab0a[m Maven and Gradle version upgrades
+[33mf9399b7[m Fix typo in visits form which caused button to miss its text
+[33m67643c4[m Remove Reactor workaround for AOT
+[33mcefaf55[m Downgrading to mysql 9.2
+[33m2e61f19[m Updated Copyright to year 2025
+[33m9faad25[m Cleanup maven-enforcer-plugin message
+[33m47dfd4f[m Cleanup Java Classes
+[33m142321a[m Extracted findPetTypes
+[33mb21890c[m Aligned postgres properties with mysql properties
+[33md44ad42[m Upgrading to Spring Boot 3.5
+[33m4a021e4[m Upgraded databases
+[33m9264c48[m Upgrading gradle wrapper to current version
+[33maf86455[m Cleanup HTML files
+[33m3a93108[m Remove unused findAll method from OwnerRepository and related test setup
+[33mc5af32d[m Internationalization Enhancement
+[33m0c88f91[m Adding strings for all other languages
+[33m332abbc[m Note about windows shell
+[33md7cc02f[m Use the java.util List.of() instead of the AssetJ Lists class
+[33mfceca77[m Associating a <label> with a form control
+[33m7f1af26[m Remove unnecessary @Autowired annotation from the PetTypeFormatter
+[33m2aa53f9[m Fix pet update functionality - Fixed issue where editing a pet's type or name wasn't persisting - Updated processUpdateForm to modify existing pet instead of   adding new one - Added proper handling of existing pet update
+[33m6328d2c[m Add DCO to README
+[33m7bce202[m Add dco config
+[33maa2273e[m Make sure MySQL test app works
+[33m1f89996[m Update Spring Boot to 3.4.2
+[33m73d7360[m Use Java Streams to sort the Specialty objects by their name
+[33mb46b97a[m Remove unused Transactional import
+[33m6148ddd[m Uses the date property of the Visit entity
+[33mee8f8dc[m Migrate Spring links for issues from Jira to GitHub
+[33m22caee3[m feat: add Persian and Turkish localization files for application messages
+[33m42e2c74[m Add a Dockerfile for dev environments other than codespaces
+[33m3b90fac[m Fix occasional stale volume in postgres tests
+[33m300597f[m Update tomestamp for reproducible builds
+[33m40a4137[m Add new test file -<modify>: remove `@Transactional`. -<add>: create unit-test file related to `PetValidator`. -<refactor>: move pet objects initialization to `@BeforeEach` setup.
+[33m214a8fb[m <fix>: rename the DI variable name in constructor.
+[33ma0ba075[m Futher updates for Spring Boot 3.4
+[33m91f55a4[m Versionless webjars (again)
+[33m9f1cda1[m Update to Boot 3.4
+[33m317562a[m Implement K8S deployment testing using Kind in GitHub Actions
+[33m1cad412[m Refactor code logic <refactor>: remove useless logic cod. <refactor>: detele useless annotation which is provided by Jpa. <refactor>: refactor implement of `findByLastName`, use Jpa to simplify query.
+[33m668629d[m refactor `OwnerRepository`: -<replace>: use `JpaRepository` to replace `Repository` in `OwnerRepository` class. -<remove1>: remove `save()` method. JpaRepository provides it by default. -<remove2>: remove `@Query` because in `Owner` class, the `@OneToMany` annotiation achieved `fetch` in query. -<refactor1>: use `Optional<Owner>` to recieve the result from `findById()`, and if is null, throw `IllegalArugmentExpection`. -<refactor2>: achieve the assert to judge return value in tests. -<add>: add name to `@author` tag.
+[33ma3026bd[m Add Kubernetes support
+[33m50866de[m Refactor the logic and add unit test -<add>: add `@NotBlank` validation to pet's name. -<refactor>: delete useless code and add unit test to check duplicate Pet name validation logic. -<modify>: add `Id` to pet in unit test. -<refactor>: classify unit test.
+[33m14af47d[m Refactor: - <optimize>: delete logic `add owner to model` because of the comment `@ModelAttribute("owner")`. - <fix>: add logical judgment in ordet to avoid `owner` from `form` and `ownerId` from `url` mismatch.
+[33mfdc40a7[m Fix harmless bugs. - <fix>: use `equals` to replace `==` to compare `Integer` variable. - <delete>: remove redundant 'toLowerCase()' method and simplify pet lookup logic. - <update>: rewrite method `getName()` comments.
+[33ma50bfb6[m Update Spring Boot release, adding Gradle build and cleanup
+[33mdff45cf[m fix: Temporarily removing accentuation from messages.
+[33m90bbb98[m Update readme to refer to test main classes
+[33mbbb2379[m feat: Adds support for the Portuguese language.
+[33m912de16[m feat: add russian
+[33m62dbfa8[m Remove the unnecessary includeFilters
+[33mae1bb82[m Minor code changes are the following: -Removed unused variables from few files. -Added null assertions in some tests. -Removed unnecessary throw exceptions.
+[33mfc44212[m fix(jmx): strip spaces before path
+[33mf8001e0[m Change chmod like other files
+[33m608e2b6[m Update maven and gradle wrapper
+[33m6fffe61[m Updated db containers, and dependencies
+[33m2daa399[m Removed unused imports Made some variables as final
+[33md90e284[m Disable JPA Open Session In View
+[33mf6f923b[m Upgrade to Spring Boot 3.3.4
+[33mcabb74e[m Update to Boot 3.3.3
+[33m91328af[m Upgrade to Spring Boot 3.3.2
+[33m12eb8b1[m Update the DevContainer configuration
+[33m383edc1[m Update readme.md to link to Spring Boot docs
+[33md8fcd11[m Upgrade to Maven 3.9.7
+[33m308f7ec[m Including CycloneDX for SBOM generation
+[33mfa8f683[m Upgrade Gradle build to Spring Boot 3.3.0
+[33m39cc7e1[m Upgrade Dependencies
+[33m7034d17[m Upgrade to Spring Boot 3.3.0
+[33m52e528b[m Upgrade to Maven Wrapper 3.3.1
+[33maa9b9e7[m Upgrade to Spring Boot 3.2.5
+[33m055ef65[m Upgrade to Maven 3.9.6
+[33m85ae6fb[m Upgrade to Gradle 8.7
+[33m6fa3fa8[m Update docker-compose.yml
+[33m527dad0[m Update docker-compose.yml to bump postgresql to 16.3
+[33m284d079[m fix: docker-compose.yml: `version` is obsolete
+[33m405cdc6[m Add user friendly error message
+[33mc7bc8b1[m fix typo in confirmation message
+[33mc0bc917[m Formatting
+[33mbf3bc29[m Fix postgres data
+[33m395356a[m remove leading spaces in /owners//pets//visits/new, /owners//pets//visits/new and /webjars/bootstrap/5.3.2/dist/js/bootstrap.bundle.min.js resulting in 404s
+[33m8f79926[m test: remove duplicate assertion
+[33m19f5268[m test: improve test readability
+[33mf3a6
