@@ -1,0 +1,21 @@
+name: Java-Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:                    #telling it that build or deploy job
+    name: my-spc            #name: our wish
+    runs-on: self-hosted
+
+
+    steps:
+      - name: Git_checkout
+        uses: actions/checkout@4
+
+      - name: Build java with maven\
+        run: mvn package
+      
+      - name: my sonar scan
