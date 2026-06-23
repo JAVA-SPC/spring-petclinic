@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Git_checkout
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
 
       - name: Build java with maven\
         run: mvn package
