@@ -44,21 +44,21 @@ public class PetClinicIntegrationTests {
 	private RestTemplateBuilder builder;
 
 	@Test
-	void testFindAll() {
+	void findAll() {
 		vets.findAll();
 		vets.findAll(); // served from cache
 	}
 
 	@Test
-	void testOwnerDetails() {
-		RestTemplate template = builder.rootUri("http://localhost:" + port).build();
+	void ownerDetails() {
+		RestTemplate template = builder.baseUri("http://localhost:" + port).build();
 		ResponseEntity<String> result = template.exchange(RequestEntity.get("/owners/1").build(), String.class);
 		assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
 	}
 
 	@Test
-	void testOwnerList() {
-		RestTemplate template = builder.rootUri("http://localhost:" + port).build();
+	void ownerList() {
+		RestTemplate template = builder.baseUri("http://localhost:" + port).build();
 		ResponseEntity<String> result = template.exchange(RequestEntity.get("/owners?lastName=").build(), String.class);
 		assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
 	}
