@@ -11,7 +11,7 @@ FROM eclipse-temurin:25-noble AS runtime
 LABEL project=spc
 LABEL author=devopsteam
 #creating a user to protect jar file
-RUN useraddd -m -d /java -s /bin/bash devops 
+RUN useradd -m -d /java -s /bin/bash devops 
 #switching to devops user
 USER devops
 #creating directory to store jar file for security from hackers
