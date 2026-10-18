@@ -9,7 +9,7 @@ RUN mvn package
 FROM eclipse-temurin:25-noble AS runtime
 #label is metadata what this project or etc is
 LABEL project=spc
-LABEL author= devopsteam
+LABEL author=devopsteam
 #creating a user to protect jar file
 RUN useraddd -m -d /java -s /bin/bash devops 
 #switching to devops user
